@@ -1,0 +1,123 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(67deg, #181825, #1e1e2e);
+  padding: 1rem;
+  border-radius: 17px;
+  flex-wrap: wrap;
+  box-shadow: 10px 1px #AAB2E9;
+  margin: 0px 20px 0px 20px;
+}
+
+input {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+  background-color: #585b70;
+  color: #cdd6f4;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 10px;
+  border: 0px solid #AAB2E9;
+  font-size: 1.425rem;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.125rem;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input:active,
+input:focus {
+  border: 0px solid #AAB2E9;
+  outline: none;
+}
+
+input:disabled {
+  border: 1px solid black;
+  border-radius: 0px;
+  background-color: #F9FAFB;
+}
+
+.search-button {
+  background: linear-gradient(67deg, #89dceb, #74c7ec, #89b4fa);
+  font-family: Firacode Nerd Font Mono;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+
+}
+
+.post-button {
+  background: linear-gradient(67deg, #eba0ac, #fab387);
+  padding: 10px 20px;
+
+}
+
+button {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  border: 0px solid #AAB2E9;
+  align-items: center;
+  border-radius: 999px;
+  margin-left: 10px;
+  font-size: 1.025rem;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.125rem;
+}
+
+button:hover {}
+
+h1 {
+  font-size: 2.025rem;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.125rem;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  color: #AAB2E9;
+  padding: 0.2rem;
+  padding-left: 1.5rem;
+  /* margin-top: px; */
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+
+  input {
+    width: 80%;
+  }
+
+  button {
+    width: 10%;
+    font-size: 1.1rem;
+    margin: 8px auto;
+    display: block;
+  }
+
+  .post-button {
+    width: 95%;
+  }
+
+  .search-button {
+    width: 10%;
+    padding: 7px 20px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  h1 {
+    display: none;
+  }
+}

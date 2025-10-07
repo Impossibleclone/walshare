@@ -1,0 +1,83 @@
+<div class="nvim-container">
+  <div class="nvim-window">
+    <div class="title-bar">
+      <span class="file-name">LOGIN.sh</span>
+    </div>
+
+    <div class="content-area">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="line">
+          <span class="line-num">1</span> <span class="prompt">λ</span>
+          <span class="comment">// Welcome to the Wallpaper Share</span>
+        </div>
+        <div class="line">
+          <span class="line-num">2</span> <span class="prompt">λ</span>
+          <span class="comment">// Please login to continue</span>
+        </div>
+        <div class="line empty"><span class="line-num">3</span></div>
+
+        <div class="input-group">
+          <div class="line">
+            <span class="line-num">4</span> <span class="prompt">λ</span>
+            <label for="email">user = "</label>
+            <input 
+              id="email" 
+              type="email" 
+              formControlName="email" 
+              placeholder="your@email.com"
+              [class.error]="email?.invalid && (email?.dirty || email?.touched)">
+            <span>"</span>
+            <span class="cursor-block"></span>
+          </div>
+          @if (email?.invalid && (email?.dirty || email?.touched)) {
+            <div class="error-line">
+              <span class="line-num"></span> <span class="prompt">>></span>
+              @if (email?.hasError('required')) { <span class="error-message">Error: Email is required.</span> }
+              @if (email?.hasError('email')) { <span class="error-message">Error: Invalid email format.</span> }
+            </div>
+          }
+        </div>
+
+        <div class="input-group">
+          <div class="line">
+            <span class="line-num">5</span> <span class="prompt">λ</span>
+            <label for="password">pass = "</label>
+            <input 
+              id="password" 
+              type="password" 
+              formControlName="password" 
+              placeholder="********"
+              [class.error]="password?.invalid && (password?.dirty || password?.touched)">
+            <span>"</span>
+            <span class="cursor-block"></span>
+          </div>
+          @if (password?.invalid && (password?.dirty || password?.touched)) {
+            <div class="error-line">
+              <span class="line-num"></span> <span class="prompt">>></span>
+              @if (password?.hasError('required')) { <span class="error-message">Error: Password is required.</span> }
+              @if (password?.hasError('minLength')) { <span class="error-message">Error: Password needs 8+ chars.</span> }
+            </div>
+          }
+        </div>
+
+        <div class="line empty"><span class="line-num">6</span></div>
+        <div class="line">
+          <span class="line-num">7</span> <span class="prompt">λ</span>
+          <button type="submit" [disabled]="loginForm.invalid">
+            <span class="command-text">authenticate()</span>
+          </button>
+        </div>
+        <div class="line empty"><span class="line-num">8</span></div>
+        <div class="line">
+          <span class="line-num">9</span> <span class="prompt">λ</span>
+          <span class="comment">// Don't have an account?</span>
+        </div>
+        <div class="line">
+          <span class="line-num">10</span> <span class="prompt">λ</span>
+          <a routerLink="/signup"><span class="command-text">create_account()</span></a>
+        </div>
+        <div class="line empty"><span class="line-num">11</span></div>
+      </form>
+    </div>
+  </div>
+</div>

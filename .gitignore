@@ -1,0 +1,75 @@
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+package-lock.json
+pnpm-lock.yaml
+
+# IDEs and editors
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment files
+/src/environments/environment*.ts
+!.env.example
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Angular build artifacts
+/.angular/cache
+/.angular/server
+
+# misc
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+/coverage
+
+# Logs
+*.log
+logs/
+lerna-debug.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# VSCode build files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Optional: if using Vite
+/.vite
+/.vitepress
+vite.config.ts.timestamp*
+
+# Optional: if using Tauri or Electron
+/src-tauri/target
+/src-tauri/.cargo
+/src-tauri/Cargo.lock
+/src-tauri/tauri.conf.json
+
+# Optional: if using testing tools
+/.eslintcache
+/jest-cache
+/jest-results
+/playwright-report
+/test-results

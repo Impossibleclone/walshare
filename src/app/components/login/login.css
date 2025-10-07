@@ -1,0 +1,207 @@
+/* src/app/pages/login/login.component.css */
+
+/* Import a monospace font, e.g., from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+:host {
+  /* CSS Variables for our Neovim theme */
+  --bg-deep: #21252b;
+  --bg-main: #282c34;
+  --bg-header: #1e222a;
+  --border-color: #3e4451;
+  --text-main: #abb2bf;
+  --text-subtle: #5c6370;
+  --accent-blue: #61afef;
+  --accent-purple: #c678dd;
+  --accent-green: #98c379;
+  --accent-red: #e06c75;
+  --accent-cyan: #56b6c2;
+  --cursor-blue: #528bff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 70px); /* Adjust for navbar height */
+  background-color: var(--bg-main);
+  font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
+  color: var(--text-main);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.nvim-container {
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.nvim-window {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: center; /* Centered the title */
+  align-items: center;
+  background-color: var(--bg-header);
+  padding: 8px 15px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--accent-purple);
+  font-size: 0.9em;
+}
+
+.file-name {
+  font-weight: bold;
+}
+
+.content-area {
+  padding: 15px 0;
+}
+
+.content-area form {
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  display: flex;
+  align-items: baseline;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 2px;
+}
+
+.line.empty {
+  min-height: 1em;
+}
+
+.line-num {
+  color: var(--text-subtle);
+  text-align: right;
+  min-width: 30px;
+  margin-right: 10px;
+  user-select: none;
+}
+
+.prompt {
+  color: var(--accent-blue);
+  margin-right: 8px;
+}
+
+.comment {
+  color: var(--text-subtle);
+  font-style: italic;
+}
+
+label {
+  color: var(--accent-purple);
+  white-space: pre;
+}
+
+input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  outline: none;
+  color: var(--accent-green);
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  padding: 0;
+  margin: 0 2px;
+}
+
+input:focus {
+  border-bottom: 1px solid var(--accent-cyan);
+}
+
+input.error {
+  border-bottom: 1px solid var(--accent-red);
+}
+
+input::placeholder {
+  color: rgba(171, 178, 191, 0.4);
+}
+
+.cursor-block {
+  width: 8px;
+  height: 1.1em;
+  background-color: var(--cursor-blue);
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  animation: blink-caret 1s infinite steps(1, end);
+}
+
+input:focus + .cursor-block {
+  opacity: 0;
+}
+
+@keyframes blink-caret {
+  from, to { background-color: transparent; }
+  50% { background-color: var(--cursor-blue); }
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.error-line {
+  display: flex;
+  align-items: baseline;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: -5px;
+}
+
+.error-line .prompt {
+  color: var(--accent-red);
+}
+
+.error-line .error-message {
+  color: var(--accent-red);
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+button, a {
+  background-color: transparent;
+  color: var(--accent-blue);
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  margin-left: 60px;
+  text-align: left;
+}
+
+button {
+  border: 1px solid var(--accent-blue);
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+button:hover:not(:disabled), a:hover {
+  background-color: var(--accent-blue);
+  color: var(--bg-main);
+  text-decoration: none;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: var(--text-subtle);
+  color: var(--text-subtle);
+}
+
+.command-text {
+  font-weight: bold;
+}

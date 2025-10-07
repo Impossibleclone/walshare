@@ -1,0 +1,28 @@
+* {
+  background-color: #1C1C2B;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+h1 {
+  font-size: 1.725rem;
+  line-height: 100%;
+  letter-spacing: 0.125rem;
+  margin: 0;
+  font-family: Firacode Nerd Font;
+  /* display: flex; */
+  /* justify-content: center; */
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+  background: linear-gradient(67deg, #f38ba8, #eba0ac, #fab387, #f9e2af);
+  color: transparent;
+  background-clip: text;
+}
+
+p {
+  font-family: Firacode Nerd Font;
+  display: flex;
+  justify-content: center;
+}
